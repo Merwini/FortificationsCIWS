@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			Defs/ThingDef[defName="FT_Maxim4M" or
+			defName="FT_AutoCannon" or
+			defName="FT_TurretAutoCannon_Twin" or
+			defName="FT_TurretAA" or
+			defName="FT_TurretQuadAA" or
+			defName="FT_TurretHeavyFlak"]/thingClass
+		</xpath>
+		<value>
+			<thingClass>CombatExtended.Building_CIWS_CE</thingClass>
+		</value>
+	</Operation>
+
+	<!-- Verbs taken from included CE patch in Fortifications Industrial for 1.5, updated for 1.6 balance -->
+	<!-- Balance notes in original patches: 防空数值补偿：瞄准时间降至0.01，后座力75%，射程全图，删除最小射程-->
+	<!-- Roughly translated to: Anti-Air Stat Compensation: Aiming time reduced to 0.01s, Recoil set to 75%, Range covers the entire map, Minimum range removed. -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_QuadMG"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0.3</recoilAmount>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>1000</range>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<burstShotCount>20</burstShotCount>
+				<soundCast>GunShotA</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_Autocannon"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0.69</recoilAmount>
+				<hasStandardCommand>True</hasStandardCommand>
+				<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>2500</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_Autocannon_Twin"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0.21</recoilAmount>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>2500</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_TurretAA"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0.21</recoilAmount>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>2500</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>18</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_TurretQuadAA"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0.2</recoilAmount>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_20x138mmB_AP</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>2500</range>
+				<burstShotCount>8</burstShotCount>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<soundCast>Shot_Autocannon</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>18</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="FT_Gun_TurretHeavyFlak"]/verbs</xpath>
+		<value>
+			<li Class="CombatExtended.VerbProperties_CIWSSkyfaller">
+				<verbClass>CombatExtended.VerbCIWSSkyfaller</verbClass>
+				<recoilAmount>0</recoilAmount>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_128x958mmR_HE</defaultProjectile>
+				<warmupTime>0.1</warmupTime>
+				<range>1000</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>120mm</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>32</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+				<holdFireLabel>HoldCloseInSkyfallersFire</holdFireLabel>
+			</li>
+		</value>
+	</Operation>
+	
+</Patch>

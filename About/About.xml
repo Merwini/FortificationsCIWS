@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>CIWS For Fortifications - Industrial</name>
+	<author>Nuff</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>nuff.fortificationsciws</packageId>
+	<description>Fortifications - Industrial CE patch for 1.5 made several turrets into CIWS, but 1.6 patches do not. This re-adds CIWS for 1.6, based on the original 1.5 patches.</description>
+	<loadAfter>
+		<li>CETeam.CombatExtended</li>
+		<li>Aoba.Fortress.Industrial</li>
+	</loadAfter>
+	<modDependencies>
+		<li>
+			<packageId>Aoba.Fortress.Industrial</packageId>
+			<displayName>Fortifications - Industrial</displayName>
+			<downloadUrl>https://github.com/AobaKuma/Fortification-Industrial</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2561619583</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>CETeam.CombatExtended</packageId>
+			<displayName>Combat Extended</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2890901044</steamWorkshopUrl>
+			<downloadUrl>https://github.com/CombatExtended-Continued/CombatExtended</downloadUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
