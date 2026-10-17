@@ -4,6 +4,7 @@
 	<author>Nuff</author>
 	<supportedVersions>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<packageId>nuff.fortificationsciws</packageId>
 	<description>Fortifications - Industrial CE patch for 1.5 made several turrets into CIWS, but 1.6 patches do not. This re-adds CIWS for 1.6, based on the original 1.5 patches.</description>
